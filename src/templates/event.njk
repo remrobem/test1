@@ -1,0 +1,7 @@
+<article style="color: {{ color }}; background-color: {{ background-color }}; font-family: {{ font }}; font-size: {{ font-size }};">
+  <h2>{{ title }}</h2>
+  {% image image, title, "(min-width: 30em) 50vw, 100vw" %}
+  <p>{{ date }} - {{ location }}</p>
+  <div>{{ content }}</div>
+  <a href="/events/{{ slug }}.html">More</a>
+</article>

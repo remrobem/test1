@@ -1,0 +1,22 @@
+---
+layout: layout.njk
+title: Home
+---
+
+<h1>Events</h1>
+<div>
+  {% for event in collections.events %}
+    <div>
+      {% renderTemplate "event.njk" event %}
+    </div>
+  {% endfor %}
+</div>
+
+<h1>News</h1>
+<div>
+  {% for newsItem in collections.news %}
+    <div>
+      {% renderTemplate "news.njk" newsItem %}
+    </div>
+  {% endfor %}
+</div>

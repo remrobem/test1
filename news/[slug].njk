@@ -1,0 +1,11 @@
+---
+layout: layout.njk
+pagination:
+  data: collections.news
+  size: 1
+  alias: newsItem
+  filter: "{{ newsItem.slug == page.fileSlug }}"
+permalink: "news/{{ newsItem.slug }}.html"
+---
+
+{% renderTemplate "news-detail.njk" newsItem %}

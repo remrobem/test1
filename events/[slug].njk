@@ -1,0 +1,11 @@
+---
+layout: layout.njk
+pagination:
+  data: collections.events
+  size: 1
+  alias: event
+  filter: "{{ event.slug == page.fileSlug }}"
+permalink: "events/{{ event.slug }}.html"
+---
+
+{% renderTemplate "event-detail.njk" event %}
